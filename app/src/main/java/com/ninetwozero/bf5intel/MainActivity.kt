@@ -1,14 +1,13 @@
 package com.ninetwozero.bf5intel
 
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
-import android.view.Menu
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.main_container.*
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.main_activity.*
+import kotlinx.android.synthetic.main.main_container.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,27 +34,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        when (item.itemId) {
-            R.id.action_settings -> return true
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
+            R.id.nav_overview -> {
+
+            }
             R.id.nav_weapons -> {
-                // Handle the camera action
+
             }
             R.id.nav_vehicles -> {
 
@@ -66,10 +52,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_medals -> {
 
             }
-            R.id.nav_settings -> {
+            //About section
+            R.id.nav_app_info ->{
 
             }
-            R.id.nav_about -> {
+            R.id.nav_changelog -> {
+
+            }
+            R.id.nav_credits -> {
+
+            }
+            R.id.nav_licences -> {
+
+            }
+            R.id.nav_settings -> {
 
             }
         }

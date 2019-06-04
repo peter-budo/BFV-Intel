@@ -3,8 +3,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
 
     <!--Navigation drawer -->
     <string name="nav_soldier_name">Soldier name</string>
@@ -15,6 +13,9 @@
     <string name="nav_menu_vehicles">Vehicles</string>
     <string name="nav_menu_codex">Codex</string>
     <string name="nav_menu_medals">Medals</string>
+
+    <string name="nav_menu_search">Search</string>
+    <string name="nav_menu_find_soldier">Find Soldier</string>
 
     <string name="nav_menu_about">About</string>
     <string name="nav_menu_app_info">App info</string>
