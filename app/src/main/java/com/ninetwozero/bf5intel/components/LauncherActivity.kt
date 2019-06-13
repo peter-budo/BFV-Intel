@@ -1,10 +1,10 @@
-package com.ninetwozero.bf5intel.components.localization
+package com.ninetwozero.bf5intel.components
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ninetwozero.bf5intel.R
 
-class LanguageSelector : AppCompatActivity() {
+class LauncherActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
