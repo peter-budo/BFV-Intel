@@ -2,9 +2,10 @@ package com.ninetwozero.bf5intel.components.localization
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ninetwozero.bf5intel.R
 import com.ninetwozero.bf5intel.components.localization.fragments.LanguageFragment
 
-class StartActivity : AppCompatActivity() {
+class SetupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

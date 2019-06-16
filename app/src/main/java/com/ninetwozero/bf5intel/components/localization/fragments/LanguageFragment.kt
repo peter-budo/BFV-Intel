@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ninetwozero.bf5intel.components.localization.R
+import com.ninetwozero.bf5intel.R
 import com.ninetwozero.bf5intel.components.localization.viewmodels.LanguageViewModel
 
 class LanguageFragment : Fragment() {
@@ -21,7 +21,7 @@ class LanguageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.start_fragment, container, false)
+        return inflater.inflate(R.layout.language_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

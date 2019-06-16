@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_welcome">Welcome!</string>
+    <string name="setting_select_language">Please select your language</string>
+
+    <string-array name="settings_languages">
+        <item>English</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Japanese</item>
+        <item>Italian</item>
+        <item>Korean</item>
+        <item>German</item>
+        <item>Simplified Chinese</item>
+        <item>Čeština</item>
+        <item>Polish</item>
+        <item>Russian</item>
+        <item>Portuguese (Brazilian)</item>
+        <item>Spanish (Mexican)</item>
+        <item>Turkish</item>
+        <item>Traditional Chinese</item>
+        <item>Arabic</item>
+    </string-array>
+
+    <string-array name="settings_languages_codes">
+        <item>EnUs</item>
+        <item>FrFr</item>
+        <item>EsEs</item>
+        <item>JaJp</item>
+        <item>ItIt</item>
+        <item>KoKr</item>
+        <item>DeDe</item>
+        <item>ZhCn</item>
+        <item>CsCz</item>
+        <item>PlPl</item>
+        <item>RuRu</item>
+        <item>PtBr</item>
+        <item>EsMx</item>
+        <item>TrTr</item>
+        <item>ZhTw</item>
+        <item>ArSa</item>
+    </string-array>
+</resources>

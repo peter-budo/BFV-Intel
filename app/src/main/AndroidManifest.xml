@@ -16,11 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".components.localization.StartActivity">
+        <activity android:name=".components.localization.SetupActivity">
+            <intent-filter>
             <action android:name="android.intent.action.VIEW" />
 
             <category android:name="android.intent.category.DEFAULT" />
-
+            </intent-filter>
         </activity>
         <activity
             android:name=".components.MainActivity"
