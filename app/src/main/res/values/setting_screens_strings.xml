@@ -2,6 +2,7 @@
 <resources>
     <string name="settings_welcome">Welcome!</string>
     <string name="setting_select_language">Please select your language</string>
+    <string name="btn_next">Next</string>
 
     <string-array name="settings_languages">
         <item>English</item>
