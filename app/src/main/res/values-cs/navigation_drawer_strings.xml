@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_soldier_name">Meno vojaka</string>
+    <string name="nav_soldier_current_rank">Sucastna hodnost</string>
+
+    <string name="nav_menu_overview">Overview</string>
+    <string name="nav_menu_weapons">Zbrane</string>
+    <string name="nav_menu_vehicles">Vozidla</string>
+    <string name="nav_menu_codex">Codex</string>
+    <string name="nav_menu_medals">Vyznamenania</string>
+
+    <string name="nav_menu_search">Vyhladavanie</string>
+    <string name="nav_menu_find_soldier">Najdi vojaka</string>
+
+    <string name="nav_menu_about">O aplikacii</string>
+    <string name="nav_menu_app_info">Info aplikacie</string>
+    <string name="nav_menu_changelog">Log uprav</string>
+    <string name="nav_menu_credits">Kredit</string>
+    <string name="nav_menu_licences">Licencie</string>
+    <string name="nav_menu_settings">Nastavenia</string>
+</resources>
