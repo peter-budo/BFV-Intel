@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.ninetwozero.bf5intel.R
-import com.ninetwozero.bf5intel.components.localization.SetupActivity
+import com.ninetwozero.bf5intel.components.onboarding.OnboardingActivity
 
 class LauncherActivity : AppCompatActivity() {
 
@@ -20,7 +20,7 @@ class LauncherActivity : AppCompatActivity() {
 
     private fun openNextScreen() {
         //TODO("Implement DB check to see if this is first launch and user need to select language")
-        startActivity(Intent(this, if(true) SetupActivity::class.java else MainActivity::class.java))
+        startActivity(Intent(this, if(true) OnboardingActivity::class.java else MainActivity::class.java))
         finish()
     }
 }

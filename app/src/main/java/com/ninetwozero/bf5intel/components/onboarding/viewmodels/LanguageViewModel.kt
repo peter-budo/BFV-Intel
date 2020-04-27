@@ -1,4 +1,4 @@
-package com.ninetwozero.bf5intel.components.localization.viewmodels
+package com.ninetwozero.bf5intel.components.onboarding.viewmodels
 
 import androidx.lifecycle.ViewModel
 

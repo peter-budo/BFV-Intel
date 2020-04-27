@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings_welcome">Welcome!</string>
-    <string name="setting_select_language">Please select your language</string>
+    <string name="language_title">Langauge selection!</string>
+    <string name="language_explanation">Please select your language. This language will be used for all the network queries for data from EA/DICE.</string>
+    <string name="language_note">Unfortunately there are only limited option to choose from. We, this application developers, are unable to influence these language options. You can always change your selection later through <b>Settings</b> option if you change your mind.</string>
     <string name="btn_next">Next</string>
 
     <string-array name="settings_languages">

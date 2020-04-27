@@ -22,9 +22,34 @@
         <item name="android:textSize">@dimen/title</item>
     </style>
 
-    <style name="TitleWhite">
-        <item name="android:textColor">@android:color/white</item>
+    <style name="Note">
+        <item name="android:textSize">@dimen/note</item>
+        <item name="android:textColor">@color/fontColour</item>
+    </style>
+
+    <style name="DefaultTextSize">
+        <item name="android:textSize">@dimen/normal</item>
+        <item name="android:textColor">@color/fontColour</item>
+    </style>
+
+    <style name="Title">
         <item name="android:textSize">@dimen/title</item>
+        <item name="android:textColor">@color/fontColour</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Header">
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">@color/fontColour</item>
+    </style>
+
+    <style name="TitleWhite" parent="Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SpinnerItem">
+        <item name="android:textColor">@color/fontColour</item>
+        <item name="android:textSize">@dimen/normal</item>
     </style>
 
 </resources>

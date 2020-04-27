@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".components.localization.SetupActivity">
+        <activity android:name=".components.onboarding.OnboardingActivity">
             <intent-filter>
             <action android:name="android.intent.action.VIEW" />
 
