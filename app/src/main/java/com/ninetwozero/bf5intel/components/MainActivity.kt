@@ -1,16 +1,14 @@
 package com.ninetwozero.bf5intel.components
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
 import com.ninetwozero.bf5intel.R
 
@@ -29,9 +27,9 @@ class MainActivity : AppCompatActivity() {
         val navController = host.navController
 
         val drawerLayout : DrawerLayout? = findViewById(R.id.drawer_layout)
-        appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_classes, R.id.nav_weapons, R.id.nav_vehicles),
-            drawerLayout)
+        appBarConfiguration = AppBarConfiguration(/*navController.graph*/
+            setOf(R.id.overview_dest, R.id.classes_dest, R.id.weapons_list_dest, R.id.vehicles_list_dest)
+            , drawerLayout)
 
         setupActionBar(navController, appBarConfiguration)
 
@@ -50,5 +48,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return findNavController(R.id.main_nav_host_fragment).navigateUp(appBarConfiguration)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = findNavController(R.id.main_nav_host_fragment)
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 }

@@ -23,7 +23,7 @@
     <fragment
             android:id="@+id/weapons_list_dest"
             android:name="com.ninetwozero.bf5intel.components.weapons.WeaponsListFragment"
-            android:label="Weapon list"
+            android:label="@string/nav_menu_weapons"
             tools:layout="@layout/weapons_list_fragment">
         <action
                 android:id="@+id/go_weapon_detail"
@@ -34,14 +34,14 @@
     <fragment
             android:id="@+id/weapon_detail_dest"
             android:name="com.ninetwozero.bf5intel.components.weapons.WeaponDetailFragment"
-            android:label="Weapon detail"
+            android:label="@string/nav_menu_weapon_detail"
             tools:layout="@layout/weapon_detail_fragment" />
 
     <!--VEHICLES-->
     <fragment
             android:id="@+id/vehicles_list_dest"
             android:name="com.ninetwozero.bf5intel.components.vehicles.VehiclesListFragment"
-            android:label="Vehicles list"
+            android:label="@string/nav_menu_vehicles"
             tools:layout="@layout/vehicles_list_fragment">
         <action
                 android:id="@+id/go_weapon_detail"
@@ -52,7 +52,7 @@
     <fragment
             android:id="@+id/vehicle_detail_dest"
             android:name="com.ninetwozero.bf5intel.components.vehicles.VehicleDetailFragment"
-            android:label="Vehicle detail"
+            android:label="@string/nav_menu_vehicle_detail"
             tools:layout="@layout/vehicle_detail_fragment" />
 
 </navigation>
