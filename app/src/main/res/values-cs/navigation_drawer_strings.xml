@@ -4,10 +4,11 @@
     <string name="nav_soldier_current_rank">Sucastna hodnost</string>
 
     <string name="nav_menu_overview">Overview</string>
+    <string name="nav_menu_classes">Triedy</string>
     <string name="nav_menu_weapons">Zbrane</string>
+    <string name="nav_menu_weapon_detail">Zbran detail</string>
     <string name="nav_menu_vehicles">Vozidla</string>
-    <string name="nav_menu_codex">Codex</string>
-    <string name="nav_menu_medals">Vyznamenania</string>
+    <string name="nav_menu_vehicle_detail">Vozidlo detail</string>
 
     <string name="nav_menu_search">Vyhladavanie</string>
     <string name="nav_menu_find_soldier">Najdi vojaka</string>

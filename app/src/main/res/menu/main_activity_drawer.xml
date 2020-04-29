@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/nav_menu_overview" />
         <item
+            android:id="@+id/nav_classes"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/nav_menu_classes" />
+        <item
             android:id="@+id/nav_weapons"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/nav_menu_weapons" />
@@ -16,14 +20,6 @@
             android:id="@+id/nav_vehicles"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/nav_menu_vehicles" />
-        <item
-            android:id="@+id/nav_codex"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/nav_menu_codex" />
-        <item
-            android:id="@+id/nav_medals"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/nav_menu_medals" />
     </group>
 
     <item android:title="@string/nav_menu_search">

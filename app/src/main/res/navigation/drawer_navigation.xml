@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_navigation"
+        app:startDestination="@+id/overview_dest">
+
+    <!--OVERVIEW-->
+    <fragment
+            android:id="@+id/overview_dest"
+            android:name="com.ninetwozero.bf5intel.components.overview.OverviewFragment"
+            android:label="@string/nav_menu_overview"
+            tools:layout="@layout/overview_fragment" />
+
+    <!--CLASSES-->
+    <fragment
+            android:id="@+id/classes_dest"
+            android:name="com.ninetwozero.bf5intel.components.bf_classes.BfClassesFragment"
+            android:label="@string/nav_menu_classes"
+            tools:layout="@layout/bf_classes_fragment" />
+
+    <!--WEAPONS-->
+    <fragment
+            android:id="@+id/weapons_list_dest"
+            android:name="com.ninetwozero.bf5intel.components.weapons.WeaponsListFragment"
+            android:label="Weapon list"
+            tools:layout="@layout/weapons_list_fragment">
+        <action
+                android:id="@+id/go_weapon_detail"
+                app:destination="@+id/weapon_detail_dest" />
+    </fragment>
+
+    <!--WEAPON DETAIL-->
+    <fragment
+            android:id="@+id/weapon_detail_dest"
+            android:name="com.ninetwozero.bf5intel.components.weapons.WeaponDetailFragment"
+            android:label="Weapon detail"
+            tools:layout="@layout/weapon_detail_fragment" />
+
+    <!--VEHICLES-->
+    <fragment
+            android:id="@+id/vehicles_list_dest"
+            android:name="com.ninetwozero.bf5intel.components.vehicles.VehiclesListFragment"
+            android:label="Vehicles list"
+            tools:layout="@layout/vehicles_list_fragment">
+        <action
+                android:id="@+id/go_weapon_detail"
+                app:destination="@+id/vehicle_detail_dest" />
+    </fragment>
+
+    <!--VEHICLES DETAIL-->
+    <fragment
+            android:id="@+id/vehicle_detail_dest"
+            android:name="com.ninetwozero.bf5intel.components.vehicles.VehicleDetailFragment"
+            android:label="Vehicle detail"
+            tools:layout="@layout/vehicle_detail_fragment" />
+
+</navigation>

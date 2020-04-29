@@ -1,4 +1,4 @@
-package com.ninetwozero.bf5intel.components.overview
+package com.ninetwozero.bf5intel.components.bf_classes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ninetwozero.bf5intel.R
 
-class OverviewFragment : Fragment() {
+class BfClassesFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,6 +15,6 @@ class OverviewFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.overview_fragment, container, false)
+        return inflater.inflate(R.layout.bf_classes_fragment, container, false)
     }
 }

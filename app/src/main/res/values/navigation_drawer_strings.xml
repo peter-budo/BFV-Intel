@@ -4,10 +4,11 @@
     <string name="nav_soldier_current_rank">Current rank</string>
 
     <string name="nav_menu_overview">Overview</string>
+    <string name="nav_menu_classes">Classes</string>
     <string name="nav_menu_weapons">Weapons</string>
+    <string name="nav_menu_weapon_detail">Weapon detail</string>
     <string name="nav_menu_vehicles">Vehicles</string>
-    <string name="nav_menu_codex">Codex</string>
-    <string name="nav_menu_medals">Medals</string>
+    <string name="nav_menu_vehicle_detail">Vehicle detail</string>
 
     <string name="nav_menu_search">Search</string>
     <string name="nav_menu_find_soldier">Find Soldier</string>
