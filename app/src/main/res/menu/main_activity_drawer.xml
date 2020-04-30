@@ -35,24 +35,22 @@
         <menu>
             <item
                 android:id="@+id/nav_app_info"
-                android:icon="@drawable/ic_menu_info"
+                android:icon="@drawable/ic_menu_app_info"
                 android:title="@string/nav_menu_app_info" />
             <item
                 android:id="@+id/nav_changelog"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_menu_changelog"
                 android:title="@string/nav_menu_changelog" />
-            <item
-                android:id="@+id/nav_credits"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/nav_menu_credits" />
-            <item
-                android:id="@+id/nav_licences"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/nav_menu_licences" />
             <item
                 android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_menu_settings"
                 android:title="@string/nav_menu_settings" />
+            <item
+                android:id="@+id/nav_credits"
+                android:title="@string/nav_menu_credits" />
+            <item
+                android:id="@+id/nav_licences"
+                android:title="@string/nav_menu_licences" />
         </menu>
     </item>
 
