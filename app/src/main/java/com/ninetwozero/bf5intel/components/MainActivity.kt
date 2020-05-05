@@ -2,78 +2,56 @@ package com.ninetwozero.bf5intel.components
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
 import com.ninetwozero.bf5intel.R
-import kotlinx.android.synthetic.main.main_activity.*
-import kotlinx.android.synthetic.main.main_container.*
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var appBarConfiguration : AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+        val host: NavHostFragment = supportFragmentManager.findFragmentById(R.id.main_nav_host_fragment) as NavHostFragment? ?: return
+        val navController = host.navController
 
-        val toggle = ActionBarDrawerToggle(
-            this, drawer_layout, toolbar,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()
+        val drawerLayout : DrawerLayout? = findViewById(R.id.drawer_layout)
+        appBarConfiguration = AppBarConfiguration(/*navController.graph*/
+            setOf(R.id.overview_dest, R.id.classes_dest, R.id.weapons_list_dest, R.id.vehicles_list_dest)
+            , drawerLayout)
 
-        nav_view.setNavigationItemSelectedListener(this)
+        setupActionBar(navController, appBarConfiguration)
+
+        setupNavigationMenu(navController)
     }
 
-    override fun onBackPressed() {
-        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
-            drawer_layout.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
+    private fun setupNavigationMenu(navController: NavController) {
+        val sideNavView = findViewById<NavigationView>(R.id.nav_view)
+        sideNavView?.setupWithNavController(navController)
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        when (item.itemId) {
-            R.id.nav_overview -> {
+    private fun setupActionBar(navController: NavController,
+                               appBarConfig : AppBarConfiguration) {
+        setupActionBarWithNavController(navController, appBarConfig)
+    }
 
-            }
-            R.id.nav_weapons -> {
+    override fun onSupportNavigateUp(): Boolean {
+        return findNavController(R.id.main_nav_host_fragment).navigateUp(appBarConfiguration)
+    }
 
-            }
-            R.id.nav_vehicles -> {
-
-            }
-            R.id.nav_codex -> {
-
-            }
-            R.id.nav_medals -> {
-
-            }
-            //About section
-            R.id.nav_app_info ->{
-
-            }
-            R.id.nav_changelog -> {
-
-            }
-            R.id.nav_credits -> {
-
-            }
-            R.id.nav_licences -> {
-
-            }
-            R.id.nav_settings -> {
-
-            }
-        }
-
-        drawer_layout.closeDrawer(GravityCompat.START)
-        return true
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = findNavController(R.id.main_nav_host_fragment)
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 }

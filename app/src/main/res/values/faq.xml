@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="faq_questions">
+        <item>How do I find my profile?</item>
+        <item>My stats are out of date. How do I get latest statics?</item>
+    </string-array>
+
+    <string-array name="faq_answers">
+        <item>Open search and type in name of your soldier/character in the game and press search. This should return you one or more results. If no results found please check the name for any typos. Please do NOT use your EA credentials!</item>
+        <item>Each of main pages (these showing list) is refreshable. You should use same approach as when refreshing any of the applications like Google Gmail, Whatsapp. Simply put your fingers on screen and pull down.</item>
+    </string-array>
+</resources>

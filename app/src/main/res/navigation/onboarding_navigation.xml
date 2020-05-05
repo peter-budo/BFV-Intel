@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/onboarding_navigation"
+        app:startDestination="@id/languageFragment">
+
+
+    <fragment
+            android:id="@+id/languageFragment"
+            android:name="com.ninetwozero.bf5intel.components.onboarding.fragments.LanguageFragment"
+            android:label="LanguageFragment"
+            tools:layout="@layout/language_fragment">
+        <action
+                android:id="@+id/next_action"
+                app:destination="@id/permissionsFragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/permissionsFragment"
+            android:name="com.ninetwozero.bf5intel.components.onboarding.fragments.PermissionsFragment"
+            android:label="PermissionsFragment"
+            tools:layout="@layout/permissions_fragment"/>
+</navigation>

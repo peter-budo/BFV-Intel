@@ -5,25 +5,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_overview"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/overview_dest"
+            android:icon="@drawable/ic_menu_overview"
             android:title="@string/nav_menu_overview" />
         <item
-            android:id="@+id/nav_weapons"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/classes_dest"
+            android:icon="@drawable/ic_menu_classes"
+            android:title="@string/nav_menu_classes" />
+        <item
+            android:id="@+id/weapons_list_dest"
+            android:icon="@drawable/ic_menu_weapons"
             android:title="@string/nav_menu_weapons" />
         <item
-            android:id="@+id/nav_vehicles"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/vehicles_list_dest"
+            android:icon="@drawable/ic_menu_vehicles"
             android:title="@string/nav_menu_vehicles" />
-        <item
-            android:id="@+id/nav_codex"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/nav_menu_codex" />
-        <item
-            android:id="@+id/nav_medals"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/nav_menu_medals" />
     </group>
 
     <item android:title="@string/nav_menu_search">
@@ -39,24 +35,22 @@
         <menu>
             <item
                 android:id="@+id/nav_app_info"
-                android:icon="@drawable/ic_menu_info"
+                android:icon="@drawable/ic_menu_app_info"
                 android:title="@string/nav_menu_app_info" />
             <item
                 android:id="@+id/nav_changelog"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_menu_changelog"
                 android:title="@string/nav_menu_changelog" />
-            <item
-                android:id="@+id/nav_credits"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/nav_menu_credits" />
-            <item
-                android:id="@+id/nav_licences"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/nav_menu_licences" />
             <item
                 android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_menu_settings"
                 android:title="@string/nav_menu_settings" />
+            <item
+                android:id="@+id/nav_credits"
+                android:title="@string/nav_menu_credits" />
+            <item
+                android:id="@+id/nav_licences"
+                android:title="@string/nav_menu_licences" />
         </menu>
     </item>
 

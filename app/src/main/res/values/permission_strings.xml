@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permissions_title">Permission</string>
+    <string name="permission_description">We are using Google Firebase to capture analytics data from application to help us deal with crashes. We would like to request your permission to include Battlefield V persona (your in game name) in reported crashes to see what is the cause of the crash.</string>
+    <string name="finish_button">Finish</string>
+</resources>
