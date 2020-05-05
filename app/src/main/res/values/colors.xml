@@ -5,4 +5,6 @@
     <color name="colorAccent">#42A5F5</color>
 
     <color name="fontColour">#585858</color>
+
+    <color name="simple_icon_black">@color/fontColour</color>
 </resources>

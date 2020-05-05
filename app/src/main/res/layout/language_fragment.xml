@@ -31,7 +31,7 @@
                     tools:background="@android:color/red"/> <!--TODO remove once icon added-->
 
             <TextView
-                    android:id="@+id/language_welcome"
+                    android:id="@+id/permissions_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -41,7 +41,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/app_icon" />
 
             <TextView
-                    android:id="@+id/description_select_language"
+                    android:id="@+id/permissions_description"
                     style="@style/DefaultTextSize"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                     android:text="@string/language_explanation"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/language_welcome" />
+                    app:layout_constraintTop_toBottomOf="@+id/permissions_title" />
 
             <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/language_spinner"
@@ -58,7 +58,7 @@
                     android:layout_marginTop="64dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/description_select_language" />
+                    app:layout_constraintTop_toBottomOf="@+id/permissions_description" />
 
             <TextView
                     android:id="@+id/language_note"

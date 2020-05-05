@@ -24,7 +24,7 @@ class PermissionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<View>(R.id.onboardin_finish).setOnClickListener {
+        view.findViewById<View>(R.id.finish_btn).setOnClickListener {
             //savePermissions()
 
             launchMainActivity()
