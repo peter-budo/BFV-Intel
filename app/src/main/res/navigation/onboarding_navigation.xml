@@ -20,5 +20,23 @@
             android:id="@+id/permissionsFragment"
             android:name="com.ninetwozero.bf5intel.components.onboarding.fragments.PermissionsFragment"
             android:label="PermissionsFragment"
-            tools:layout="@layout/permissions_fragment"/>
+            tools:layout="@layout/permissions_fragment">
+        <argument
+                android:name="selected_language_code"
+                app:argType="string" />
+
+        <action
+            android:id="@+id/navigate_to_main_activity"
+            app:destination="@id/main_activity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/main_activity"
+        android:name="com.ninetwozero.bf5intel.components.MainActivity"
+        android:label="Main Activity"
+        tools:layout="@layout/main_activity">
+        <argument
+            android:name="selected_soldier"
+            app:argType="string" />
+    </activity>
 </navigation>

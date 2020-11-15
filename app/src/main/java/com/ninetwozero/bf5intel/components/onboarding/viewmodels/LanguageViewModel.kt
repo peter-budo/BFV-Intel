@@ -1,27 +1,25 @@
 package com.ninetwozero.bf5intel.components.onboarding.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.ninetwozero.bf5intel.repository.SettingsRepository
-import com.ninetwozero.bf5intel.repository.storage.BfVDatabase
-import com.ninetwozero.bf5intel.repository.storage.entity.Settings
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
-class LanguageViewModel(application: Application) : AndroidViewModel(application) {
+class LanguageViewModel(private val settingsRepository: SettingsRepository) : ViewModel() {
 
-    private val repository: SettingsRepository
-    var settings: Settings
+   /* val settings: LiveData<Settings> = settingsRepository.getSettings.asLiveData()
 
-    init {
-        val settingsDao = BfVDatabase.getDatabase(application, viewModelScope).settingsDao()
-        repository = SettingsRepository(settingsDao)
-        settings = repository.getSettings
-    }
-
-    fun insert(language: String) = viewModelScope.launch(Dispatchers.IO) {
+    fun insert(language: String) = viewModelScope.launch {
         settings.language = language
-        repository.insert(settings)
+        settingsRepository.insert(settings)
+    }*/
+}
+
+class LanguageViewModelFactory(private val repository: SettingsRepository) :
+    ViewModelProvider.Factory {
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(LanguageViewModel::class.java)) {
+            return LanguageViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

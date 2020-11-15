@@ -3,6 +3,7 @@ package com.ninetwozero.bf5intel.components
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.ninetwozero.bf5intel.R
 import com.ninetwozero.bf5intel.components.onboarding.OnboardingActivity
@@ -13,8 +14,9 @@ class LauncherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.launcher_activity)
 
-        val delay = Handler()
-        delay.postDelayed({openNextScreen()}, 3000)
+        Handler(Looper.getMainLooper()).postDelayed({
+            openNextScreen()
+        }, 3000)
 
     }
 

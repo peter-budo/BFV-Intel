@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
@@ -32,6 +34,11 @@ android {
 
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 
     kotlinOptions {

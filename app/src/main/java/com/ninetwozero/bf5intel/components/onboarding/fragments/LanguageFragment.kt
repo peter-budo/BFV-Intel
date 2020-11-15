@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.ninetwozero.bf5intel.R
 
-class LanguageFragment : Fragment(), AdapterView.OnItemSelectedListener {
+class LanguageFragment : Fragment() {
 
     private lateinit var spinner: AppCompatSpinner
 
@@ -34,16 +34,10 @@ class LanguageFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 }
         }
 
-        view.findViewById<View>(R.id.language_next_btn).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.next_action)
-        )
-    }
-
-    override fun onNothingSelected(parent: AdapterView<*>?) {
-        //do nothing
-    }
-
-    override fun onItemSelected(parent: AdapterView<*>?, view: View?, index: Int, id: Long) {
-        TODO("not implemented, DB store locale preference for network calls")
+        view.findViewById<Button>(R.id.language_next_btn)?.setOnClickListener {
+            val langCode = resources.getStringArray(R.array.settings_languages_codes)[spinner.selectedItemPosition]
+            val action = LanguageFragmentDirections.nextAction(langCode)
+            findNavController().navigate(action)
+        }
     }
 }

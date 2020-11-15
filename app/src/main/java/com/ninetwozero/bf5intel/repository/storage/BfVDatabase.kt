@@ -12,35 +12,13 @@ import kotlinx.coroutines.launch
 
 @Database(
     entities = arrayOf(Settings::class),
-    version = 1
+    version = 1,
+    exportSchema = true
 )
-public abstract class BfVDatabase : RoomDatabase() {
+abstract class BfVDatabase : RoomDatabase() {
 
     abstract fun settingsDao(): SettingsDao
 
-    companion object {
-        @Volatile
-        private var INSTANCE: BfVDatabase? = null
-
-        fun getDatabase(
-            context: Context,
-            scope: CoroutineScope
-        ): BfVDatabase {
-            val tempInstance = INSTANCE
-            if (tempInstance != null) {
-                return tempInstance
-            }
-            synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    BfVDatabase::class.java,
-                    "bfv_database"
-                ).addCallback(BfVDatabaseCallback(scope)).build()
-                INSTANCE = instance
-                return instance
-            }
-        }
-    }
 
     private class BfVDatabaseCallback(
         private val scope: CoroutineScope
@@ -55,8 +33,30 @@ public abstract class BfVDatabase : RoomDatabase() {
         }
 
         suspend fun populateDatabase(settingsDao: SettingsDao) {
-            var settings = Settings(1, "", false, "")
+            val settings = Settings(1, "", false, "")
             settingsDao.insert(settings)
+        }
+    }
+
+    companion object {
+        @Volatile
+        private var INSTANCE: BfVDatabase? = null
+
+        fun getDatabase(
+            context: Context,
+            scope: CoroutineScope
+        ): BfVDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance: BfVDatabase = Room.databaseBuilder(
+                    context.applicationContext,
+                    BfVDatabase::class.java,
+                    "bfv_database"
+                ).addCallback(BfVDatabaseCallback(scope))
+                    .build()
+                INSTANCE = instance
+
+                instance
+            }
         }
     }
 }

@@ -1,15 +1,15 @@
 package com.ninetwozero.bf5intel.components.onboarding.fragments
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.ninetwozero.bf5intel.R
-import com.ninetwozero.bf5intel.components.MainActivity
 
 
 class PermissionsFragment : Fragment() {
@@ -24,26 +24,25 @@ class PermissionsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<View>(R.id.finish_btn).setOnClickListener {
-            //savePermissions()
+        val safeArgs: PermissionsFragmentArgs by navArgs()
+        val languageCode = safeArgs.selectedLanguageCode
+
+        val analyticsToggle = view.findViewById<SwitchCompat>(R.id.permission_switch)
+
+        view.findViewById<Button>(R.id.finish_btn).setOnClickListener {
+            savePermissions(languageCode, analyticsToggle.isChecked)
 
             launchMainActivity()
         }
     }
 
-    override fun onAttach(activity: Activity) {
-        super.onAttach(activity)
-        Log.e("PermissionFragment", "PermissionFragment onAttach called")
-    }
-
-    private fun savePermissions() {
-        TODO("Not yet implemented")
+    private fun savePermissions(languageCode: String, analyticsAllowed: Boolean) {
+        //TODO("Not yet implemented")
     }
 
     private fun launchMainActivity() {
-        val intent = Intent(activity, MainActivity::class.java)
-        startActivity(intent)
-
-        activity?.finish()
+        //TODO need to check on conditional navigation to skip onboarding if settings populated and solder available
+        val directions = PermissionsFragmentDirections.navigateToMainActivity("")
+        findNavController().navigate(directions)
     }
 }
