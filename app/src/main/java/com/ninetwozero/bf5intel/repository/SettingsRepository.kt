@@ -8,8 +8,7 @@ class SettingsRepository(private val settingsDao: SettingsDao) {
 
     val getSettings: Flow<Settings> = settingsDao.getSettings()
 
-    suspend fun insertLanguage(settings: Settings) {
-
+    suspend fun insert(settings: Settings) {
         settingsDao.insert(settings)
     }
 }

@@ -7,12 +7,22 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.ninetwozero.bf5intel.BfVApplication
 import com.ninetwozero.bf5intel.R
+import com.ninetwozero.bf5intel.components.onboarding.viewmodels.SettingsViewModel
+import com.ninetwozero.bf5intel.components.onboarding.viewmodels.SettingsViewModelFactory
+import com.ninetwozero.bf5intel.repository.SettingsRepository
+import com.ninetwozero.bf5intel.repository.storage.entity.Settings
 
 
 class PermissionsFragment : Fragment() {
+
+    private val settingsViewModel: SettingsViewModel by viewModels {
+        SettingsViewModelFactory(SettingsRepository(BfVApplication.getDatabase().settingsDao()))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,11 +47,10 @@ class PermissionsFragment : Fragment() {
     }
 
     private fun savePermissions(languageCode: String, analyticsAllowed: Boolean) {
-        //TODO("Not yet implemented")
+        settingsViewModel.insert(Settings(position = 1, language = languageCode, analyticsPermission = analyticsAllowed, selectedSoldier = ""))
     }
 
     private fun launchMainActivity() {
-        //TODO need to check on conditional navigation to skip onboarding if settings populated and solder available
         val directions = PermissionsFragmentDirections.navigateToMainActivity("")
         findNavController().navigate(directions)
     }

@@ -16,7 +16,7 @@ class BfVApplication : Application() {
 
         private var app :BfVApplication? = null
 
-        val applicationScope = CoroutineScope(SupervisorJob())
+        private val applicationScope = CoroutineScope(SupervisorJob())
 
         fun getDatabase(): BfVDatabase =  BfVDatabase.getDatabase(app!!.applicationContext, applicationScope)
     }
