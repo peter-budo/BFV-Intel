@@ -3,6 +3,7 @@
 ###Companion application for Battlefield V players.
 
 Desired features:
+
     1. On-boarding process to allow
         * selection of language from supported options
         * request permissions for analytics to be able to track user interaction with available data
@@ -15,6 +16,7 @@ Desired features:
 
 
 Optional features:
+
     1. Soldier switching when multiple soldiers previously looked up
     2. Remove soldier
     3. Settings to be able to change locale and analytics permissions
