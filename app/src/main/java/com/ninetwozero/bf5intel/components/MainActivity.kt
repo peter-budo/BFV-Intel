@@ -14,7 +14,7 @@ import com.ninetwozero.bf5intel.R
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration : AppBarConfiguration
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,13 +23,19 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val host: NavHostFragment = supportFragmentManager.findFragmentById(R.id.main_nav_host_fragment) as NavHostFragment? ?: return
+        val host: NavHostFragment =
+            supportFragmentManager.findFragmentById(R.id.main_nav_host_fragment) as NavHostFragment?
+                ?: return
         val navController = host.navController
 
-        val drawerLayout : DrawerLayout? = findViewById(R.id.drawer_layout)
+        val drawerLayout: DrawerLayout? = findViewById(R.id.drawer_layout)
         appBarConfiguration = AppBarConfiguration(/*navController.graph*/
-            setOf(R.id.overview_dest, R.id.classes_dest, R.id.weapons_list_dest, R.id.vehicles_list_dest)
-            , drawerLayout)
+            setOf(
+                R.id.overview_dest, R.id.classes_dest, R.id.weapons_list_dest,
+                R.id.vehicles_list_dest, R.id.find_soldier_dest, R.id.app_info_dest,
+                R.id.changelog_dest, R.id.settings_dest, R.id.credits_dest, R.id.licences_dest
+            ), drawerLayout
+        )
 
         setupActionBar(navController, appBarConfiguration)
 
@@ -41,8 +47,10 @@ class MainActivity : AppCompatActivity() {
         sideNavView?.setupWithNavController(navController)
     }
 
-    private fun setupActionBar(navController: NavController,
-                               appBarConfig : AppBarConfiguration) {
+    private fun setupActionBar(
+        navController: NavController,
+        appBarConfig: AppBarConfiguration
+    ) {
         setupActionBarWithNavController(navController, appBarConfig)
     }
 
