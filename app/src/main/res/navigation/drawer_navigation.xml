@@ -55,4 +55,12 @@
             android:label="@string/nav_menu_vehicle_detail"
             tools:layout="@layout/vehicle_detail_fragment" />
 
+    <!--SOLDIER SEARCH-->
+    <fragment
+        android:id="@+id/find_soldier_dest"
+        android:name="com.ninetwozero.bf5intel.components.search.FindSoldierFragment"
+        android:label="@string/nav_menu_find_soldier"
+        tools:layout="@layout/find_soldier_fragment" />
+
+
 </navigation>

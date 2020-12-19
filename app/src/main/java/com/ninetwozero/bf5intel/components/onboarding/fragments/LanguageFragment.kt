@@ -26,10 +26,10 @@ class LanguageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         spinner = requireView().findViewById(R.id.language_spinner)
-        context?.let {
+        requireContext().let {
             ArrayAdapter.createFromResource(it, R.array.settings_languages, R.layout.spinner_item)
                 .also { adapter ->
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    adapter.setDropDownViewResource(R.layout.spinner_item)
                     spinner.adapter = adapter
                 }
         }

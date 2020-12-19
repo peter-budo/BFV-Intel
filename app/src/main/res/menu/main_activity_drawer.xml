@@ -25,7 +25,7 @@
     <item android:title="@string/nav_menu_search">
         <menu>
             <item
-                android:id="@+id/nav_find_soldier"
+                android:id="@+id/find_soldier_dest"
                 android:icon="@drawable/ic_menu_search"
                 android:title="@string/nav_menu_find_soldier" />
         </menu>
@@ -34,22 +34,22 @@
     <item android:title="@string/nav_menu_about">
         <menu>
             <item
-                android:id="@+id/nav_app_info"
+                android:id="@+id/app_info_dest"
                 android:icon="@drawable/ic_menu_app_info"
                 android:title="@string/nav_menu_app_info" />
             <item
-                android:id="@+id/nav_changelog"
+                android:id="@+id/changelog_dest"
                 android:icon="@drawable/ic_menu_changelog"
                 android:title="@string/nav_menu_changelog" />
             <item
-                android:id="@+id/nav_settings"
+                android:id="@+id/settings_dest"
                 android:icon="@drawable/ic_menu_settings"
                 android:title="@string/nav_menu_settings" />
             <item
-                android:id="@+id/nav_credits"
+                android:id="@+id/credits_dest"
                 android:title="@string/nav_menu_credits" />
             <item
-                android:id="@+id/nav_licences"
+                android:id="@+id/licences_dest"
                 android:title="@string/nav_menu_licences" />
         </menu>
     </item>

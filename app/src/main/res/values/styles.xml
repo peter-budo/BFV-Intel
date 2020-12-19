@@ -22,6 +22,10 @@
         <item name="android:textSize">@dimen/title</item>
     </style>
 
+    <style name="spinnerTheme" parent= "Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="strokeColor">@color/text_field_bg</item>
+    </style>
+
     <style name="Note">
         <item name="android:textSize">@dimen/note</item>
         <item name="android:textColor">@color/fontColour</item>

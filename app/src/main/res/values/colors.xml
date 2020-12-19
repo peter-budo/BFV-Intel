@@ -7,4 +7,5 @@
     <color name="fontColour">#585858</color>
 
     <color name="simple_icon_black">@color/fontColour</color>
+    <color name="text_field_bg">#9E9D9D</color>
 </resources>

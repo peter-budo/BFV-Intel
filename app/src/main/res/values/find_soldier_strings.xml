@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_platform">Please select platform</string>
+    <string name="hint_enter_soldier_name">Please enter soldier name</string>
+    <string name="error_enter_soldier_name">Soldier name cannot be empty</string>
+    <string name="error_select_platform">Please select game platform of the soldier</string>
+    <string name="platform_pc">PC</string>
+    <string name="platform_ps4">PlayStation 4</string>
+    <string name="platform_xboxone">Xbox One</string>
+    <string name="find_soldier_btn">Find soldier</string>
+    <string-array name="platform_options">
+        <item>@string/platform_pc</item>
+        <item>@string/platform_ps4</item>
+        <item>@string/platform_xboxone</item>
+    </string-array>
+</resources>
