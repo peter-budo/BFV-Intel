@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Button
-import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ninetwozero.bf5intel.R
+import com.ninetwozero.bf5intel.databinding.LanguageFragmentBinding
+import com.ninetwozero.bf5intel.viewbinding.viewBinding
 
 class LanguageFragment : Fragment() {
 
-    private lateinit var spinner: AppCompatSpinner
+    private val binding: LanguageFragmentBinding by viewBinding(LanguageFragmentBinding::bind)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,17 +25,17 @@ class LanguageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        spinner = requireView().findViewById(R.id.language_spinner)
+
         requireContext().let {
             ArrayAdapter.createFromResource(it, R.array.settings_languages, R.layout.spinner_item)
                 .also { adapter ->
                     adapter.setDropDownViewResource(R.layout.spinner_item)
-                    spinner.adapter = adapter
+                    binding.languageSpinner.adapter = adapter
                 }
         }
 
-        view.findViewById<Button>(R.id.language_next_btn)?.setOnClickListener {
-            val langCode = resources.getStringArray(R.array.settings_languages_codes)[spinner.selectedItemPosition]
+        binding.languageNextBtn.setOnClickListener {
+            val langCode = resources.getStringArray(R.array.settings_languages_codes)[binding.languageSpinner.selectedItemPosition]
             val action = LanguageFragmentDirections.nextAction(langCode)
             findNavController().navigate(action)
         }
