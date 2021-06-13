@@ -11,7 +11,7 @@ object Plugins {
     const val buildTools = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
 
     object Versions {
-        const val androidGradlePlugin = "4.1.3"
-        const val buildTools = "29.0.3"
+        const val androidGradlePlugin = "4.2.1"
+        const val buildTools = "30.0.3"
     }
 }
