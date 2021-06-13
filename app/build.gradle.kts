@@ -15,6 +15,13 @@ android {
         versionCode = 1
         versionName = "0.0.1"
         testInstrumentationRunner(Dependencies.androidJunitRunner)
+
+        // Room schema location for generated db version
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments(mutableMapOf("room.schemaLocation" to "$projectDir/schemas"))
+            }
+        }
     }
 
     buildFeatures {
@@ -65,7 +72,7 @@ dependencies {
     androidTestImplementation(Dependencies.roomTesting)
 
     //Lifecycle components
-    implementation(Dependencies.lifecycleExtensions)
+    implementation(Dependencies.lifecycleLiveDataKtx)
     implementation(Dependencies.lifecycleViewModelKtx)
     implementation(Dependencies.lifecycleCommon)
 

@@ -13,6 +13,6 @@ interface SettingsDao {
     @Query("SELECT * FROM settings_table WHERE position = 1")
     fun getSettings(): Flow<Settings>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(settings: Settings)
+    /*@Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(settings: Settings)*/
 }

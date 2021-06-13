@@ -11,9 +11,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Database(
-    entities = arrayOf(Settings::class),
-    version = 1,
-    exportSchema = true
+    entities = [
+        Settings::class
+               ],
+    version = 1
 )
 abstract class BfVDatabase : RoomDatabase() {
 
@@ -34,7 +35,7 @@ abstract class BfVDatabase : RoomDatabase() {
 
         suspend fun populateDatabase(settingsDao: SettingsDao) {
             val settings = Settings(1, "", false, "")
-            settingsDao.insert(settings)
+            //settingsDao.insert(settings)
         }
     }
 
