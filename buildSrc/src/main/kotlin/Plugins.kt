@@ -3,7 +3,6 @@ object Plugins {
     object BuildPlugins {
         const val application = "com.android.application"
         const val kotlinApplication = "kotlin-android"
-        const val androidExtensions = "kotlin-android-extensions"
         const val kotlinKapt = "kotlin-kapt"
         const val safeArgsPlugin = "androidx.navigation.safeargs.kotlin"
     }

@@ -1,7 +1,6 @@
 plugins {
     id(Plugins.BuildPlugins.application)
     id(Plugins.BuildPlugins.kotlinApplication)
-    id(Plugins.BuildPlugins.androidExtensions)
     id(Plugins.BuildPlugins.kotlinKapt)
     id(Plugins.BuildPlugins.safeArgsPlugin)
 }
@@ -16,6 +15,10 @@ android {
         versionCode = 1
         versionName = "0.0.1"
         testInstrumentationRunner(Dependencies.androidJunitRunner)
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
