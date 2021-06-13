@@ -9,6 +9,6 @@ class SettingsRepository(private val settingsDao: SettingsDao) {
     val getSettings: Flow<Settings> = settingsDao.getSettings()
 
     suspend fun insert(settings: Settings) {
-        //settingsDao.insert(settings)
+        settingsDao.insert(settings)
     }
 }

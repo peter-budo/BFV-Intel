@@ -35,7 +35,7 @@ abstract class BfVDatabase : RoomDatabase() {
 
         suspend fun populateDatabase(settingsDao: SettingsDao) {
             val settings = Settings(1, "", false, "")
-            //settingsDao.insert(settings)
+            settingsDao.insert(settings)
         }
     }
 
