@@ -6,15 +6,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Sdk.compileSdk)
-    buildToolsVersion(Plugins.Versions.buildTools)
+    compileSdk = Sdk.compileSdk
+    buildToolsVersion = Plugins.Versions.buildTools
     defaultConfig {
-        applicationId("com.ninetwozero.bf5intel")
-        minSdkVersion(Sdk.minSdk)
-        targetSdkVersion(Sdk.targetSdk)
+        applicationId = "com.ninetwozero.bf5intel"
+        minSdk = Sdk.minSdk
+        targetSdk = Sdk.targetSdk
         versionCode = 1
         versionName = "0.0.1"
-        testInstrumentationRunner(Dependencies.androidJunitRunner)
+        testInstrumentationRunner = Dependencies.androidJunitRunner
 
         // Room schema location for generated db version
         javaCompileOptions {
@@ -31,7 +31,7 @@ android {
     buildTypes {
 
         getByName("debug") {
-            applicationIdSuffix(".dev")
+            applicationIdSuffix = ".dev"
         }
 
         getByName("release") {
@@ -45,12 +45,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 }
 
