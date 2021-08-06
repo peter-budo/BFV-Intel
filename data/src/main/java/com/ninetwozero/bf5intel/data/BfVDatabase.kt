@@ -1,12 +1,12 @@
-package com.ninetwozero.bf5intel.repository.storage
+package com.ninetwozero.bf5intel.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.ninetwozero.bf5intel.repository.storage.dao.SettingsDao
-import com.ninetwozero.bf5intel.repository.storage.entity.Settings
+import com.ninetwozero.bf5intel.data.dao.SettingsDao
+import com.ninetwozero.bf5intel.data.entity.Settings
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -26,7 +26,7 @@ abstract class BfVDatabase : RoomDatabase() {
     ): RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
-            INSTANCE?.let {database ->
+            INSTANCE?.let { database ->
                 scope.launch {
                     populateDatabase(database.settingsDao())
                 }

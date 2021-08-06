@@ -1,7 +1,7 @@
 package com.ninetwozero.bf5intel
 
 import android.app.Application
-import com.ninetwozero.bf5intel.repository.storage.BfVDatabase
+import com.ninetwozero.bf5intel.data.BfVDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 

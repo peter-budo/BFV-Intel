@@ -15,7 +15,7 @@ import com.ninetwozero.bf5intel.R
 import com.ninetwozero.bf5intel.components.onboarding.viewmodels.SettingsViewModel
 import com.ninetwozero.bf5intel.components.onboarding.viewmodels.SettingsViewModelFactory
 import com.ninetwozero.bf5intel.repository.SettingsRepository
-import com.ninetwozero.bf5intel.repository.storage.entity.Settings
+import com.ninetwozero.bf5intel.data.entity.Settings
 
 
 class PermissionsFragment : Fragment() {

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.ninetwozero.bf5intel.repository.SettingsRepository
-import com.ninetwozero.bf5intel.repository.storage.entity.Settings
+import com.ninetwozero.bf5intel.data.entity.Settings
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(private val settingsRepository: SettingsRepository) : ViewModel() {

@@ -1,4 +1,4 @@
-package com.ninetwozero.bf5intel.repository.storage.entity
+package com.ninetwozero.bf5intel.data.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

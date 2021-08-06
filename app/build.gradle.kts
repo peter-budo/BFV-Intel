@@ -1,6 +1,6 @@
 plugins {
     id(Plugins.BuildPlugins.application)
-    id(Plugins.BuildPlugins.kotlinApplication)
+    id(Plugins.BuildPlugins.kotlinAndroid)
     id(Plugins.BuildPlugins.kotlinKapt)
     id(Plugins.BuildPlugins.safeArgsPlugin)
 }
@@ -41,7 +41,7 @@ android {
     }
 
     packagingOptions {
-        exclude("META-INF/atomicfu.kotlin_module")
+        resources.excludes.add("META-INF/atomicfu.kotlin_module")
     }
 
     compileOptions {
@@ -56,6 +56,8 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":data"))
+
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation(Dependencies.constraintLayout)
@@ -65,12 +67,6 @@ dependencies {
     api(Dependencies.coroutinesCore)
     api(Dependencies.coroutinesAndroid)
 
-    // Room components
-    implementation(Dependencies.roomRuntime)
-    implementation(Dependencies.roomKtx)
-    kapt(Dependencies.roomCompiler)
-    androidTestImplementation(Dependencies.roomTesting)
-
     //Lifecycle components
     implementation(Dependencies.lifecycleLiveDataKtx)
     implementation(Dependencies.lifecycleViewModelKtx)
@@ -79,7 +75,6 @@ dependencies {
     //Navigation components
     implementation(Dependencies.navigationFragmentKtx)
     implementation(Dependencies.navigationUIKtx)
-
 
     testImplementation(Dependencies.jUnit)
     androidTestImplementation(Dependencies.testRunner)
