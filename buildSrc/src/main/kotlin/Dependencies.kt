@@ -26,7 +26,6 @@ object Dependencies {
     const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
     const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
 
-
     const val jUnit = "junit:junit:${Versions.jUnit}"
     const val jUnitExt = "androidx.test.ext:junit:${Versions.jUnitExt}"
     const val testRunner = "androidx.test:runner:${Versions.testRunner}"

@@ -1,5 +1,5 @@
 object Versions {
-    const val kotlinVersion = "1.5.10"
+    const val kotlinVersion = "1.5.30"
 
     const val appCompat = "1.3.0"
     const val material = "1.3.0"
