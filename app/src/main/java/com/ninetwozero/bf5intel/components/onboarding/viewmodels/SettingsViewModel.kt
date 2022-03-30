@@ -1,19 +1,14 @@
 package com.ninetwozero.bf5intel.components.onboarding.viewmodels
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
-import com.ninetwozero.bf5intel.repository.SettingsRepository
+import androidx.lifecycle.*
 import com.ninetwozero.bf5intel.data.entity.Settings
-import kotlinx.coroutines.flow.single
+import com.ninetwozero.bf5intel.repository.SettingsRepository
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(private val settingsRepository: SettingsRepository) : ViewModel() {
 
-   /*
-   Use suspend function instead?
-   val settings: LiveData<Settings> = settingsRepository.getSettings.asLiveData() */
+   //Use suspend function instead?
+   val settings: LiveData<Settings> = settingsRepository.getSettings.asLiveData()
 
     fun insert(settings: Settings) = viewModelScope.launch {
         settingsRepository.insert(settings)

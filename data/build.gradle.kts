@@ -15,6 +15,12 @@ android {
 
         testInstrumentationRunner = Dependencies.androidJunitRunner
         //consumerProguardFiles = "consumer-rules.pro"
+
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
     }
 
     buildTypes {

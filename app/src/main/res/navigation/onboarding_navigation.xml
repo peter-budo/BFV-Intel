@@ -5,7 +5,6 @@
         android:id="@+id/onboarding_navigation"
         app:startDestination="@id/languageFragment">
 
-
     <fragment
             android:id="@+id/languageFragment"
             android:name="com.ninetwozero.bf5intel.components.onboarding.fragments.LanguageFragment"

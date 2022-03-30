@@ -12,8 +12,8 @@ object Plugins {
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePlugin}"
 
     object Versions {
-        const val androidGradlePlugin = "7.0.2"
-        const val kotlinGradlePlugin = "1.5.30"
+        const val androidGradlePlugin = "7.1.2"
+        const val kotlinGradlePlugin = "1.6.10"
         const val buildTools = "30.0.3"
     }
 }

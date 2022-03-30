@@ -7,7 +7,7 @@ object Versions {
     const val androidXCore = "1.6.0"
 
     const val lifecycleVersion = "2.3.1"
-    const val roomVersion = "2.3.0"
+    const val roomVersion = "2.4.2"
     const val navigationVersion = "2.3.5"
     const val coroutines = "1.4.2" //could be changed to 1.5.0 https://github.com/Kotlin/kotlinx.coroutines/releases
 
